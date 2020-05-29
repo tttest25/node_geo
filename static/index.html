@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Интерактивная карта</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+</head>
+
+<body lang="ru">
+    <h1 class="capt">Интерактивная карта</h1>
+    <ul class="hr">
+        <li><a href="/uik.html" target="_new">УИКи</a> </li>
+        <li><a href="/meropr.html" target="_new">Мероприятия</a> </li>
+    </ul>
+    <div style="clear:both"></div>
+    <h2 class="capt">Показатели <a id="cUpdate">*</a><a id="cresTableFill">+</a></h2>
+    <div id="infopanel" class="toggle-content">
+        <div>
+            <div id="infotable">
+                <!-- table[name="pepe"]>thead>tr>th*3^^+tbody>tr*7>td{Basico}*3 -->
+                <table name="elStatus" class="spec" width="90%">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Район</th>
+                            <th>8:00</th>
+                            <th colspan="3">10:00</th>
+                            <th colspan="3">12:00</th>
+                            <th colspan="3">15:00</th>
+                            <th colspan="3" th>18:00</th>
+                            <th colspan="3">20:00</th>
+                        </tr>
+                        <tr>
+                            <th>Изб.</th>
+                            <th>Изб.</th>
+                            <th>кол-во</th>
+                            <th>%</th>
+                            <th>Изб.</th>
+                            <th>кол-во</th>
+                            <th>%</th>
+                            <th>Изб.</th>
+                            <th>кол-во</th>
+                            <th>%</th>
+                            <th>Изб.</th>
+                            <th>кол-во</th>
+                            <th>%</th>
+                            <th>Изб.</th>
+                            <th>кол-во</th>
+                            <th>%</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="resBody">
+                        <tr class="overline">
+                            <td>Итого</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div>
+            <h2 class="capt">Итоги голосования на выборах Президента Российской Федерации 18.03.2018</h2>
+            <div>
+                <!-- table[name="pepe"]>thead>tr>th*3^^+tbody>tr*7>td{Basico}*3 -->
+                <table name="elStatus" class="spec" width="90%">
+                    <thead>
+                        <tr class="row0">
+                            <th class="col0" rowspan="2" Район </th> <th class="col1"> Кол-во избирателей </th>
+                            <th class="col2"> Явка избира-телей,% </th>
+                            <th class="col3" colspan="2"> Бабурин С.Н. </th>
+                            <th class="col5" colspan="2"> Грудинин П.Н. </th>
+                            <th class="col7" colspan="2"> Жириновский В.В. </th>
+                            <th class="col9" colspan="2"> Путин В.В. </th>
+                            <th class="col11" colspan="2"> Собчак К.А. </th>
+                            <th class="col13" colspan="2"> Сурайкин М.А. </th>
+                            <th class="col15" colspan="2"> Титов Б.Ю. </th>
+                            <th class="col17" colspan="2"> Явлинский Г.А. </th>
+                        </tr>
+                        <tr class="row1">
+                            <th class="col3"> абс. </th>
+                            <th class="col4"> % </th>
+                            <th class="col3"> абс. </th>
+                            <th class="col4"> % </th>
+                            <th class="col5"> абс. </th>
+                            <th class="col6"> % </th>
+                            <th class="col7"> абс. </th>
+                            <th class="col8"> % </th>
+                            <th class="col9"> абс. </th>
+                            <th class="col10"> % </th>
+                            <th class="col11"> абс. </th>
+                            <th class="col12"> % </th>
+                            <th class="col13"> абс. </th>
+                            <th class="col14"> % </th>
+                            <th class="col15"> абс. </th>
+                            <th class="col16"> % </th>
+                            <th class="col17"> абс. </th>
+                            <th class="col18"> % </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row2">
+                            <td class="col0"> Дзержинский </td>
+                            <td class="col1"> 120 876 </td>
+                            <td class="col2"> 64,59% </td>
+                            <td class="col3"> 657 </td>
+                            <td class="col4"> 0,84% </td>
+                            <td class="col5"> 7 958 </td>
+                            <td class="col6"> 10,20% </td>
+                            <td class="col7"> 4 249 </td>
+                            <td class="col8"> 5,44% </td>
+                            <td class="col9"> 57 657 </td>
+                            <td class="col10"> 73,87% </td>
+                            <td class="col11"> 2 916 </td>
+                            <td class="col12"> 3,74% </td>
+                            <td class="col13"> 601 </td>
+                            <td class="col14"> 0,77% </td>
+                            <td class="col15"> 1 006 </td>
+                            <td class="col16"> 1,29% </td>
+                            <td class="col17"> 1 974 </td>
+                            <td class="col18"> 2,53% </td>
+                        </tr>
+                        <tr class="row3">
+                            <td class="col0"> Индустриальный </td>
+                            <td class="col1"> 124 817 </td>
+                            <td class="col2"> 63,09% </td>
+                            <td class="col3"> 612 </td>
+                            <td class="col4"> 0,78% </td>
+                            <td class="col5"> 7 676 </td>
+                            <td class="col6"> 9,77% </td>
+                            <td class="col7"> 4 538 </td>
+                            <td class="col8"> 5,77% </td>
+                            <td class="col9"> 58 723 </td>
+                            <td class="col10"> 74,73% </td>
+                            <td class="col11"> 2 698 </td>
+                            <td class="col12"> 3,43% </td>
+                            <td class="col13"> 607 </td>
+                            <td class="col14"> 0,77% </td>
+                            <td class="col15"> 966 </td>
+                            <td class="col16"> 1,23% </td>
+                            <td class="col17"> 1 741 </td>
+                            <td class="col18"> 2,22% </td>
+                        </tr>
+                        <tr class="row4">
+                            <td class="col0"> Кировский </td>
+                            <td class="col1"> 98 136 </td>
+                            <td class="col2"> 62,68% </td>
+                            <td class="col3"> 456 </td>
+                            <td class="col4"> 0,74% </td>
+                            <td class="col5"> 5 916 </td>
+                            <td class="col6"> 9,62% </td>
+                            <td class="col7"> 3 894 </td>
+                            <td class="col8"> 6,33% </td>
+                            <td class="col9"> 46 333 </td>
+                            <td class="col10"> 75,37% </td>
+                            <td class="col11"> 1 678 </td>
+                            <td class="col12"> 2,73% </td>
+                            <td class="col13"> 510 </td>
+                            <td class="col14"> 0,83% </td>
+                            <td class="col15"> 675 </td>
+                            <td class="col16"> 1,10% </td>
+                            <td class="col17"> 1 188 </td>
+                            <td class="col18"> 1,93% </td>
+                        </tr>
+                        <tr class="row5">
+                            <td class="col0"> Ленинский </td>
+                            <td class="col1"> 42 113 </td>
+                            <td class="col2"> 65,17% </td>
+                            <td class="col3"> 273 </td>
+                            <td class="col4"> 0,99% </td>
+                            <td class="col5"> 3 051 </td>
+                            <td class="col6"> 11,12% </td>
+                            <td class="col7"> 1 302 </td>
+                            <td class="col8"> 4,75% </td>
+                            <td class="col9"> 19 538 </td>
+                            <td class="col10"> 71,22% </td>
+                            <td class="col11"> 1 317 </td>
+                            <td class="col12"> 4,80% </td>
+                            <td class="col13"> 208 </td>
+                            <td class="col14"> 0,76% </td>
+                            <td class="col15"> 485 </td>
+                            <td class="col16"> 1,77% </td>
+                            <td class="col17"> 882 </td>
+                            <td class="col18"> 3,21% </td>
+                        </tr>
+                        <tr class="row6">
+                            <td class="col0"> Мотовилихинский </td>
+                            <td class="col1"> 142 607 </td>
+                            <td class="col2"> 63,26% </td>
+                            <td class="col3"> 732 </td>
+                            <td class="col4"> 0,81% </td>
+                            <td class="col5"> 9 068 </td>
+                            <td class="col6"> 10,09% </td>
+                            <td class="col7"> 4 928 </td>
+                            <td class="col8"> 5,48% </td>
+                            <td class="col9"> 66 861 </td>
+                            <td class="col10"> 74,37% </td>
+                            <td class="col11"> 3 133 </td>
+                            <td class="col12"> 4,48% </td>
+                            <td class="col13"> 734 </td>
+                            <td class="col14"> 0,82% </td>
+                            <td class="col15"> 1 163 </td>
+                            <td class="col16"> 1,29% </td>
+                            <td class="col17"> 2 003 </td>
+                            <td class="col18"> 2,23% </td>
+                        </tr>
+                        <tr class="row7">
+                            <td class="col0"> Орджоникидзевский </td>
+                            <td class="col1"> 86 541 </td>
+                            <td class="col2"> 66,87% </td>
+                            <td class="col3"> 433 </td>
+                            <td class="col4"> 0,75% </td>
+                            <td class="col5"> 5 600 </td>
+                            <td class="col6"> 9,69% </td>
+                            <td class="col7"> 3 813 </td>
+                            <td class="col8"> 6,60% </td>
+                            <td class="col9"> 43 722 </td>
+                            <td class="col10"> 75,63% </td>
+                            <td class="col11"> 1 442 </td>
+                            <td class="col12"> 2,49% </td>
+                            <td class="col13"> 471 </td>
+                            <td class="col14"> 0,81% </td>
+                            <td class="col15"> 573 </td>
+                            <td class="col16"> 0,99% </td>
+                            <td class="col17"> 859 </td>
+                            <td class="col18"> 1,49% </td>
+                        </tr>
+                        <tr class="row8">
+                            <td class="col0"> Свердловский, в т.ч. </td>
+                            <td class="col1"> 160 407 </td>
+                            <td class="col2"> 65,27% </td>
+                            <td class="col3"> 861 </td>
+                            <td class="col4"> 0,82% </td>
+                            <td class="col5"> 10 478 </td>
+                            <td class="col6"> 10,01% </td>
+                            <td class="col7"> 5 827 </td>
+                            <td class="col8"> 5,56% </td>
+                            <td class="col9"> 77 404 </td>
+                            <td class="col10"> 73,93% </td>
+                            <td class="col11"> 3 783 </td>
+                            <td class="col12"> 3,61% </td>
+                            <td class="col13"> 958 </td>
+                            <td class="col14"> 0,91% </td>
+                            <td class="col15"> 1 361 </td>
+                            <td class="col16"> 1,30% </td>
+                            <td class="col17"> 2 333 </td>
+                            <td class="col18"> 2,23% </td>
+                        </tr>
+                        <tr class="row9">
+                            <td class="col0"> Новые Ляды </td>
+                            <td class="col1"> 6 059 </td>
+                            <td class="col2"> 79,67% </td>
+                            <td class="col3"> 40 </td>
+                            <td class="col4"> 0,82% </td>
+                            <td class="col5"> 447 </td>
+                            <td class="col6"> 9,26% </td>
+                            <td class="col7"> 285 </td>
+                            <td class="col8"> 5,90% </td>
+                            <td class="col9"> 3 731 </td>
+                            <td class="col10"> 77,29% </td>
+                            <td class="col11"> 102 </td>
+                            <td class="col12"> 2,11% </td>
+                            <td class="col13"> 42 </td>
+                            <td class="col14"> 0,87% </td>
+                            <td class="col15"> 43 </td>
+                            <td class="col16"> 0,89% </td>
+                            <td class="col17"> 54 </td>
+                            <td class="col18"> 1,12% </td>
+                        </tr>
+                        <tr class="row10" style="background-color: yellow;text-decoration: overline;font-weight: 500;">
+                            <td class="col0"> г.Пермь </td>
+                            <td class="col1"> 775 497 </td>
+                            <td class="col2"> 64,29% </td>
+                            <td class="col3"> 4 024 </td>
+                            <td class="col4"> 0,81% </td>
+                            <td class="col5"> 49 747 </td>
+                            <td class="col6"> 9,99% </td>
+                            <td class="col7"> 28 551 </td>
+                            <td class="col8"> 5,74% </td>
+                            <td class="col9"> 370 238 </td>
+                            <td class="col10"> 74,38% </td>
+                            <td class="col11"> 16 967 </td>
+                            <td class="col12"> 3,41% </td>
+                            <td class="col13"> 4 089 </td>
+                            <td class="col14"> 0,82% </td>
+                            <td class="col15"> 6 229 </td>
+                            <td class="col16"> 1,25% </td>
+                            <td class="col17"> 10 980 </td>
+                            <td class="col18"> 2,21% </td>
+                        </tr>
+                        <tr class="row12" style="background-color: yellow;text-decoration: overline;font-weight: 600;">
+                            <td class="col0"> Перм-ский край </td>
+                            <td class="col1 leftalign"> </td>
+                            <td class="col2"> 66,51% </td>
+                            <td class="col3 leftalign"> </td>
+                            <td class="col4"> 0,73% </td>
+                            <td class="col5 leftalign"> </td>
+                            <td class="col6"> 10,55% </td>
+                            <td class="col7 leftalign"> </td>
+                            <td class="col8"> 6,84% </td>
+                            <td class="col9 leftalign"> </td>
+                            <td class="col10"> 75,35% </td>
+                            <td class="col11 leftalign"> </td>
+                            <td class="col12"> 2,20% </td>
+                            <td class="col13 leftalign"> </td>
+                            <td class="col14"> 0,77% </td>
+                            <td class="col15 leftalign"> </td>
+                            <td class="col16"> 0,90% </td>
+                            <td class="col17 leftalign"> </td>
+                            <td class="col18"> 1,28% </td>
+                        </tr>
+                        <tr class="row14" style="background-color: yellow;text-decoration: overline;font-weight: 800;">
+                            <td class="col0"> Россия </td>
+                            <td class="col1 leftalign"> </td>
+                            <td class="col2 leftalign"> </td>
+                            <td class="col3 leftalign"> </td>
+                            <td class="col4"> 0,65% </td>
+                            <td class="col5 leftalign"> </td>
+                            <td class="col6"> 11,80% </td>
+                            <td class="col7 leftalign"> </td>
+                            <td class="col8"> 5,66% </td>
+                            <td class="col9 leftalign"> </td>
+                            <td class="col10"> 76,66% </td>
+                            <td class="col11 leftalign"> </td>
+                            <td class="col12"> 1,67% </td>
+                            <td class="col13 leftalign"> </td>
+                            <td class="col14"> 0,68% </td>
+                            <td class="col15 leftalign"> </td>
+                            <td class="col16"> 0,78% </td>
+                            <td class="col17 leftalign"> </td>
+                            <td class="col18"> 1,04% </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div>
+        <h2 class="capt">Карта - Фильтр <input type="text" id="tFilter"><span id="modeCapt">Текущий
+                режим(фильтр)</span></h2>
+        <div id="map" style="width: 70%; height: 600px" class="fleft"></div>
+        <div id="info" style="width: 30%; height: 600px" class="fleft">Информационная зона <div id="mapInfo"></div>
+        </div>
+    </div>
+</body>
+
+</html>

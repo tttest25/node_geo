@@ -1,0 +1,20 @@
+{
+  "name": "njs_static",
+  "version": "0.1.0",
+  "description": "Static Interactive Map",
+  "main": "static.js",
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "node-static": "^0.7.11"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  },
+  "scripts": {
+    "start": "node static.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Melnikov E.A.",
+  "license": "ISC"
+}

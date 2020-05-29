@@ -1,0 +1,104 @@
+table.spec {
+    border-collapse: collapse;
+    /* width: 500px; */
+    margin: 7px 0 0 30px;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.spec th, .cssver th {
+    background: #FAF3D2;
+    /* font-weight: normal; */
+    font-weight: 800;
+}
+
+.spec th, .cssver td, .cssver th {
+    border: 1px solid #333;
+    padding: 2px;
+    /* text-align: left; */
+    font-size: 0.9em;
+}
+
+.spec td {
+    border: 1px solid #333;
+    padding: 2px;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+.overline {
+    text-decoration: overline;
+    }
+
+
+th {
+    background: #bfbfbf;
+    font-size: 0.9em;
+    text-align: center;
+}
+td.red {
+    background: #c70000;
+    color: white;
+    font-weight: 600;
+}
+/* отключить задний фон яндекса */
+#map > * > [class^='ymaps-2-1-'] {
+    background: none;
+}
+
+.fleft {
+    float: left;
+}
+
+#my-listbox {
+            top: auto;
+            left: auto;
+}
+
+ul.hr {
+margin: 0; /* Обнуляем значение отступов */
+padding: 4px; /* Значение полей */
+float: right;
+}
+
+ul.hr li {
+display: inline; /* Отображать как строчный элемент */
+margin-right: 5px; /* Отступ слева */
+/* border: 1px solid #000; Рамка вокруг текста */
+padding: 3px; /* Поля вокруг текста */
+}
+
+h1.capt {
+    float:left;
+    margin: 5px 0px 5px 0px;
+}
+
+h2.capt {
+    margin: 5px 0px 5px 0px;
+}
+
+table.detail {
+    border: 0px solid #333;
+    width: -webkit-fill-available;
+}
+
+.detail td {
+    border: 0px;
+    padding: 0px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+
+.toggle-content {
+    display: none;
+}
+
+.toggle-content.is-visible {
+    display: block;
+}
