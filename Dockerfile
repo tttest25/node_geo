@@ -1,7 +1,7 @@
 # if you're doing anything beyond your local machine, please pin this to a specific version at https://hub.docker.com/_/node/
 # FROM node:8-alpine also works here for a smaller image
 # FROM node:10-slim
-FROM node:lts-alpine3.11
+FROM node:lts-slim
 
 # set our node environment, either development or production
 # defaults to production, compose overrides this to development on build and run
@@ -19,7 +19,7 @@ RUN npm i npm@latest -g
 
 # install dependencies first, in a different location for easier app bind mounting for local development
 # due to default /opt permissions we have to create the dir with root and change perms
-RUN mkdir /opt/node_app && chown node:node /opt/node_app
+RUN mkdir -p /opt/node_app/app && chown -R node:node /opt/node_app
 WORKDIR /opt/node_app
 # the official node image provides an unprivileged user as a security best practice
 # but we have to manually enable it. We put it here so npm installs dependencies as the same
@@ -45,4 +45,5 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 # so that signals are passed properly. Note the code in index.js is needed to catch Docker signals
 # using node here is still more graceful stopping then npm with --init afaik
 # I still can't come up with a good production way to run with npm and graceful shutdown
+#CMD [ "node", "./static.js" ]
 CMD [ "node", "./bin/www" ]
