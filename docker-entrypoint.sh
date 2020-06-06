@@ -26,4 +26,6 @@ file_env() {
 file_env 'MONGO_USERNAME'
 file_env 'MONGO_PASSWORD'
 
+npm install 
+
 exec "$@"

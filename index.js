@@ -88,6 +88,5 @@ var app = http.createServer((req, res) => {
   return null;
 });*/
 
-console.log('Server running on port 8080');
 
 module.exports = app;

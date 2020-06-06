@@ -1,7 +1,7 @@
 # Проект гео карта на google sheet
-docker build -t mea/node-web-app . --no-cache
-docker run -it --rm --name eam_node  mea/node-web-app
-docker run -it --mount type=bind,source="$(pwd)",target=/opt/node_app/app --rm --name eam_node  -p 3000:3000  mea/node-web-app bash
+docker build --build-arg PORT=3001  -t mea/node-web-geo-img . --no-cache
+docker run -it --rm --name node-web-geo  mea/node-web-geo-img
+docker run -it --mount type=bind,source="$(pwd)",target=/opt/node_app/app --rm --name eam_node  -p 3001:3001   mea/node-web-app bash
 
 # 1 как добавить объекты и проверить  принадлежность точки полигону
 // Орджо
