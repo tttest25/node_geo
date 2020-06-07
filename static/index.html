@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Интерактивная карта</title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=0c10a247-fa48-45da-9d1d-553e17ea01f6" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
 
 </head>
@@ -19,8 +19,9 @@
         <li><a href="/meropr.html" target="_new">Мероприятия</a> </li>
     </ul>
     <div style="clear:both"></div>
-    <h2 class="capt">Показатели <a id="cUpdate">*</a><a id="cresTableFill">+</a></h2>
+    
     <div id="infopanel" class="toggle-content">
+        <h2 class="capt">Показатели</h2>
         <div>
             <div id="infotable">
                 <!-- table[name="pepe"]>thead>tr>th*3^^+tbody>tr*7>td{Basico}*3 -->
@@ -363,7 +364,7 @@
 
 
     <div>
-        <h2 class="capt">Карта - Фильтр <input type="text" id="tFilter"><span id="modeCapt">Текущий
+        <h2 class="capt">Карта <a id="cUpdate">*</a><a id="cresTableFill">+</a> Фильтр <input type="text" id="tFilter"><span id="modeCapt">Текущий
                 режим(фильтр)</span></h2>
         <div id="map" style="width: 70%; height: 600px" class="fleft"></div>
         <div id="info" style="width: 30%; height: 600px" class="fleft">Информационная зона <div id="mapInfo"></div>
