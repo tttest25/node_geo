@@ -2,7 +2,7 @@ const http = require('http');
 
 const https = require('https');
 
-const port = 8080;
+// const port = 8080;
 
 const nstatic = require('node-static');
 
@@ -13,7 +13,7 @@ const url = require('url');
 const fs = require('fs');
 
 const apiKey = process.env.API_KEY;
-console.log('Api key: '+apiKey);
+console.log(`Api key: ${apiKey}`);
 
 
 function pDownload(pUrl, dest) {
@@ -37,10 +37,12 @@ function pDownload(pUrl, dest) {
   });
 }
 
-var app = http.createServer((req, res) => {
+const app = http.createServer((req, res) => {
   const urlParsed = url.parse(req.url, true);
   const path = urlParsed.pathname;
-  if (path === '/update') {
+  if (path === '/healthz') {
+    res.end('Healthz - json OK ');
+  } else if (path === '/update') {
     // Table
     pDownload(`https://sheets.googleapis.com/v4/spreadsheets/1bauKrfVdg2nnJLO_TUVvG_tLfWjvRJRu16klsWu1XcM/values/objects!A1:J5000?key=${apiKey}`, './static/json/objects.json')
     /*  .then(() => {
@@ -67,13 +69,13 @@ var app = http.createServer((req, res) => {
         console.log('reserve - downloaded file no issues...');
         return pDownload('https://sheets.googleapis.com/v4/spreadsheets/16mEcbu8lQA9PpzB6TO9igYALVYkUJYmf0a5BMHaQFdA/values/reserve!A2:I170?key=', './static/json/reserve.json');
       })   
-      */
-      .then(() => {console.log('DATA - downloaded file no issues...')
+    */
+      .then(() => {console.log('DATA - downloaded file no issues...');
         res.end('Update from google document - json OK ');
       })
       .catch((e) => {
-        console.error('ERROR !!!  error while downloading', e)
-        res.status(500).end('Error'+e);
+        console.error('ERROR !!!  error while downloading', e);
+        res.status(500).end(`Error ${e}`);
       });
   } else {
     // console.log(urlParsed);
@@ -81,12 +83,12 @@ var app = http.createServer((req, res) => {
   }
 });
 
-/*.listen(port, (err) => {
+/* .listen(port, (err) => {
   if (err) {
     return console.log('something bad happened', err);
   }
   return null;
-});*/
+}); */
 
 
 module.exports = app;
