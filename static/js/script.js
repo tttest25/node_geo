@@ -293,7 +293,30 @@ function timerUpdate() {
 
 function mapAddList(pmyMap) {
   // обновить
-  const secondButton = new ymaps.control.Button('Обновить');
+  const secondButton = new ymaps.control.Button({
+    data: {
+      // Зададим иконку для кнопки.
+      // image: 'images/button.jpg',
+      // Текст на кнопке.
+      content: 'Кубы в ленинском районе',
+      // Текст всплывающей подсказки.
+      title: 'Нажмите что бы отфильтровать',
+    },
+    options: {
+      // Зададим опции кнопки.
+      selectOnClick: false,
+      // У кнопки будет три состояния: иконка, текст и текст + иконка.
+      // Зададим три значения ширины кнопки для всех состояний.
+      maxWidth: [30, 100, 150],
+    }
+  });
+
+  secondButton.events.add('click', () => {
+    document.getElementById('tFilter').value = 'ЛР.+КУБ';
+    myData.mode = 'Пикет';
+    mapUNIV();
+  });
+
   pmyMap.controls.add(secondButton, {
     float: 'right',
   });
