@@ -15,11 +15,20 @@
 <body lang="ru">
     <h1 class="capt">Интерактивная карта</h1>
     <ul class="hr">
+        <li><a onclick="myShowModalGeo()">YA.map code geo</a> </li>
         <li><a href="/uik.html" target="_new">УИКи</a> </li>
         <li><a href="/meropr.html" target="_new">Мероприятия</a> </li>
     </ul>
     <div style="clear:both"></div>
     
+
+    <dialog id="myDialog">
+        <label for="fgeocoord">Координаты:</label>
+        <input type="text" id="fgeocoord" name="fgeocoord" size=35 value="преобразование массива коорд в BASE64"><br><br>
+        <textarea rows="10" cols="45" id="fgeocoordtext" name="text">[[ 57.98590843728542 , 56.21678227431659 ], [ 57.98595402467319 , 56.21298426635151 ], [ 57.96787904744448 , 56.15109899885501 ] ]</textarea><br>
+        <button onclick="myProccessCoord()">Преобразовать</button> Закрыть при нажатии "ESC"
+    </dialog>
+
     <div id="infopanel" class="toggle-content">
         <h2 class="capt">Показатели</h2>
         <div>

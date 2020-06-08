@@ -59,6 +59,23 @@ function uikDataLoad() {
 }
 */
 
+
+// ShowModal geo decode
+function myShowModalGeo() {
+  document.getElementById('myDialog').showModal();
+}
+
+function myProccessCoord() {
+  let gText = document.getElementById('fgeocoordtext').value;
+  try {
+    let res = eval(gText);
+    res = (ymaps.geometry.LineString.toEncodedCoordinates(new ymaps.geometry.LineString(res)));
+    document.getElementById('fgeocoordtext').value = res;
+  } catch (e) {
+    alert('Ошибка: ' + e.message + ', повторите ввод');
+  }
+}
+
 function mapPolygonLoad() {
   // загрузка данных по полигону
   // let CountyData;
